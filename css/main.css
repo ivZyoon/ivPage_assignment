@@ -105,7 +105,7 @@ article.main_article {
   background: url(../images/main_visual_bg.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
-  padding: 10% 5%;
+  padding: 25vh 5%;
   color: #fff;
   z-index: 1;
 }
@@ -142,7 +142,7 @@ a.btn_apply {
   color: #D6E2FF;
   border: solid 1px #d6e2ff;
   border-radius: 50%;
-  padding: 1% 1.5%;
+  padding: 15px 25px;
   font-size: 0.9rem;
   position: absolute;
   bottom: 15%;
@@ -279,6 +279,7 @@ ul.pos_list > li > div.position_box {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 ul.pos_list > li p.pos_name {
@@ -288,9 +289,10 @@ ul.pos_list > li p.pos_name {
 
 ul.pos_list > li div.pos_type {
   display: flex;
-  width: 30%;
-  justify-content: space-between;
+  width: 50%;
+  justify-content: flex-end;
   align-items: center;
+  gap: 8%;
 }
 
 ul.pos_list > li div.pos_type > p:first-child {
@@ -365,9 +367,9 @@ section.culture p.culture_title {
 ul.culture_box {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content:flex-start;
   margin-top: 3%;
-  gap: 3vh 1%;
+  gap: 1.6vw;
 }
 
 ul.culture_box > li {
@@ -495,6 +497,218 @@ footer#footer {
 #footer > address > p:first-child {
   font-family: 'Pretendard-Medium';
 }
+
+
+/* tablet */
+@media (max-width: 1024px) {
+  
+
+  header#header {
+    padding: 0 6% 0 5%;
+  }
+
+  header#header > p {
+    display: none;
+  }
+
+  section.main_visual {
+    width: 100vw;
+  }
+
+  article.main_article {
+    padding: 25vh 7%;
+    background-position: 55% 0;
+  }
+
+  article.main_article > div.main_title > p:nth-child(2) {
+    font-size: 6.5vw;
+    line-height: 7vw;
+    margin-top: 1.5%;
+  }
+
+  article.main_article > div.main_par {
+    width: 70vw;
+  }
+
+  article.main_article > a.btn_apply {
+    bottom: 10%;
+    padding: 3% 5%;
+  }
+
+
+  div.ani_box ul {
+    width: 500%;
+  }
+  div.ani_box ul li {
+    font-size: 5vh;
+    line-height: 6vh;
+  }
+
+
+  section.hiring {
+    width: 100vw;
+    display: grid;
+    grid-row: 1fr 2fr;
+    padding: 20% 7%;
+  }
+
+  section.hiring::before {
+    display: none;
+  }
+
+  section.hiring > div.hiring_left {
+    width: 100%;
+    /* background: pink; */
+  }
+
+
+  section.hiring > div.hiring_left > p:first-child {
+    font-size: 3vh;
+    color: #D6E2FF;
+  }
+
+  section.hiring > div.hiring_left > p:last-child {
+    font-size: 5vh;
+    padding-top: 2%;
+  }
+
+  section.hiring > div.hiring_right {
+    width: 100%;
+  }
+
+
+  ul.pos_list > li p.pos_name {
+    font-size: 4.5vw;
+  }
+
+  ul.pos_list > li div.pos_type {
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  ul.pos_list > li div.pos_type > p:first-child {
+    color: #D6E2FF;
+    font-size: 2vw;
+  }
+  
+  ul.pos_list > li div.pos_type > p:nth-child(2) {
+    border: solid 1px #D6E2FF;
+    border-radius: 50%;
+    padding: 3% 4%;
+    font-size: 1.5vh;
+  }
+
+  ul.pos_list ul.position_desc {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    margin-top: 5%;
+    padding: 10% 10%;
+    background: #1C1C1C;
+    display: flex;
+    flex-flow: column nowrap; 
+    font-size: 2vh;
+  }
+  
+  ul.pos_list ul.position_desc > li.task {
+    width: 100%;
+
+  }
+  
+  ul.pos_list ul.position_desc > li.condition {
+    width: 100%;
+    margin-top: 15%;
+  }
+  
+  ul.pos_list ul.position_desc > li > ul {
+    width: 100%;
+    margin-top: 20px;
+    
+  }
+  ul.pos_list ul.position_desc > li > ul > li {
+    margin-top: 20px;
+    list-style: disc;
+    margin-left: 30px;
+    font-family: 'Pretendard-Light';
+  }
+
+  section.culture {
+    width: 100vw;
+    padding:20% 7%;
+    background: #272727;
+    color: #fff;
+  
+  }
+  section.culture p.culture_sub {
+    font-size: 2.2vh;
+  }
+  section.culture p.culture_title {
+    font-size: 4vh;
+    padding-top: 1%;
+  }
+
+  ul.culture_box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: 10%;
+    gap: 2vw;
+  }
+
+  ul.culture_box > li {
+    width: 200px;
+    aspect-ratio: 1/1;
+    padding: 4% 0;
+
+  }
+  ul.culture_box > li > p.welfare{
+    font-size: 2vh;
+  }
+
+  ul.culture_box > li > p:last-child {
+    font-size: 1.5vh;
+  }
+
+  /* footer */
+  footer#footer {
+    height: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 7%;
+    gap: 5%;
+  }
+
+  #footer > h2 {
+    display: none;
+  }
+  #footer > h2 > a > img {
+    width: 100%;
+  }
+
+  #footer > address {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    color: #fff;
+    font-style: normal;
+    ;
+  }
+
+  #footer > address > p {
+    font-size: 1.5vh;
+    font-family: 'Pretendard-ExtraLight';
+    line-height: 3vh;
+  }
+
+}
+
+
+
+
 
 
 /* mobile */
